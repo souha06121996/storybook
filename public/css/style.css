@@ -1,0 +1,37 @@
+
+.dec{
+    color: rgb(255, 255, 255);
+
+}
+#contact_ul i,.side-nav i{
+    margin-right: 6px;
+}
+
+.dec:hover {
+    color: rgba(141, 141, 146, 0.959);
+    background-color:transparent;
+    
+
+}
+
+
+a:link {
+    text-decoration: none;
+    
+  }
+
+.dec1,.divider{
+    margin-top: 20px;
+    text-align: left;
+    margin-left: 5px;
+    
+}
+.dec1:hover{
+    padding: 10px;
+
+}
+
+.google{
+    margin-top: 20px;
+    text-align: center;
+}

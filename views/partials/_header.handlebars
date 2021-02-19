@@ -1,0 +1,79 @@
+<div class="pushbar_main_content">
+    <nav class="grey darken-3">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="/strories" class="dec brand-logo center">
+                    StoryBooks
+                </a>
+                <a href="#" data-pushbar-target="mypushbar1" class="button-collapse  dec left show-on-large">
+
+                    <i class="fa fa-bars fa-2x"></i>
+                </a>
+
+                {{!-- RICHT NAV --}}
+                <ul class="right hide-on-small-only" id="contact_ul">
+                    {{#if user}}
+                    <li><a href="/dashboard" class="dec">Welcome
+                            {{user.firstName}} </a></li>
+                    <li><a href="/auth/logout" class="dec"><i class="fa fa-sign-out left fa-lg "></i> Logout</a></li>
+                    {{else}}
+                    <li><a href="/stories" class="dec "> <i class="fa fa-book left fa-lg"></i>Public
+                            Stories</a>
+                    </li>
+                    {{/if}}
+
+                </ul>
+
+            </div>
+
+
+
+        </div>
+    </nav>
+</div>
+
+
+{{!-- SIDE MENU --}}
+
+<div data-pushbar-id="mypushbar1" class="grey darken-3" data-pushbar-direction="left">
+
+
+
+    <ul class="side-nav ">
+
+        <a class="  right  dec" href="#" data-pushbar-close>
+
+            <i class="fa fa-times fa-2x"></i>
+        </a>
+        <br>
+
+        {{#if user}}
+
+        {{else}}
+
+        <li class="google">
+            <a class=" btn red darken-1 text-white google" href="/auth/google"><i class="fa fa-google left  "></i>Login
+                With
+                Google </a>
+        </li>
+        <li class="divider"></li>
+        {{/if}}
+        <li class="dec1"><a href="/stories" class="  dec "> <i class="fa fa-book  fa-lg"></i>Public
+                Stories</a>
+        </li>
+        <li class="divider"></li>
+        {{#if user}}
+        <li class="dec1"><a href="/dashboard" class="dec1 dec "> <i class="fa fa-cog  fa-lg"></i>Dashboard </a>
+        </li>
+        <li class="divider"></li>
+        <li class="dec1"><a href="/stories/my" class="dec1 dec  "> <i class="fa fa-user  fa-lg"></i>My Stories</a>
+        </li>
+        <li class="divider"></li>
+        <li class="dec1"><a href="/auth/logout" class="dec1  dec"> <i class="fa fa-sign-out  fa-lg"></i>Logout</a>
+        </li>
+        <li class="divider"></li>
+        {{else}}
+        {{/if}}
+    </ul>
+</div>
+</div>
